@@ -1,0 +1,11 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
+#create an instance and attache a secuirty group
+
+resource "aws_instance" "example" {
+  ami           = "ami-04fddfc2e54715b82"
+  instance_type = "t2.micro"
+  vpc_security_group_ids = ["sg-0212fa933c89f3465"]
+}
