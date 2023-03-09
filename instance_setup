@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-#create an instance and attache a secuirty group
+#Create an instance from a image
 
 resource "aws_instance" "example" {
   ami           = "ami-04fddfc2e54715b82"
